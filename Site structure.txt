@@ -1,0 +1,14 @@
+Site structur
+
+
+index.php
+/js
+/css
+/sql
+/inc
+/inc/connection.php
+/inc/functions.php
+/images
+/data
+/data/cache
+/data/errors
