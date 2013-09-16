@@ -50,7 +50,7 @@
         die ('ERROR: Please enter one or more search keywords');
       } else {
         $q = $_POST['q'];
-        $q = ereg_replace('[[:space:]]+', '/', trim($q));
+        $q = preg_replace('/[[:space:]]+/', '/', trim($q));
       }
       
       // set max results
@@ -124,4 +124,4 @@
     ?>
     </table>
   </body>
-</html>
+</html> 
