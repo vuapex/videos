@@ -61,8 +61,7 @@
       }
       
       // generate feed URL
-      $feedURL = "http://gdata.youtube.com/feeds/api/videos/-/{$q}
-      ?orderby=viewCount&max-results={$i}";
+      $feedURL = "http://gdata.youtube.com/feeds/api/videos/-/{$q}?orderby=viewCount&max-results={$i}";
       
       // read feed into SimpleXML object
       $sxml = simplexml_load_file($feedURL);
@@ -125,4 +124,4 @@
     ?>
     </table>
   </body>
-</html> 
+</html>
