@@ -14,8 +14,8 @@ END;
 
 if ($_GET['q'] && $_GET['maxResults']) {
   // Call set_include_path() as needed to point to your client library.
-  require_once 'Google_Client.php';
-  require_once 'contrib/Google_YoutubeService.php';
+  require_once 'inc/Google_Client.php';
+  require_once 'inc/contrib/Google_YoutubeService.php';
 
   /* Set $DEVELOPER_KEY to the "API key" value from the "Access" tab of the
   Google APIs Console <http://code.google.com/apis/console#access>
