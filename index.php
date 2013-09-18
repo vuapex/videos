@@ -4,19 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>Searching for videos by keyword</title>
-    <style>
-    img {
-      padding: 2px; 
-      margin-bottom: 15px;
-      border: solid 1px silver; 
-    }
-    td {
-      vertical-align: top;
-    }
-    td.line {
-      border-bottom: solid 1px black;  
-    }
-    </style>
   </head>
   <body>
     <?php
@@ -112,7 +99,7 @@
         echo "<tr><td colspan=\"2\" class=\"line\"></td>
         </tr>\n";
         echo "<tr>\n";
-        echo "<td><a href=\"{$watch}\"><img src=\"$thumbnail\"/></a></td>\n";
+        echo "<td><a href=\"{$watch}\"><img src=\"$thumbnail\" style='witdh:100px; height:100px'/></a></td>\n";
         echo "<td><a href=\"{$watch}\">
         {$media->group->title}</a><br/>\n";
         echo sprintf("%0.2f", $length/60) . " min. | {$rating} user 
