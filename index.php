@@ -3,112 +3,215 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>Searching for videos by keyword</title>
+    <title>Recent Videos | Video By Choice</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
-    <?php
-    // if form not submitted
-    // display search box
-    if (!isset($_POST['submit'])) {
-    ?>
-    <h1>Keyword search</h1>  
-    <form method="post" action="<?php echo 
-      htmlentities($_SERVER['PHP_SELF']); ?>">
-      Keywords: <br/>
-      <input type="text" name="q" />
-      <p/>
-      Items to display: <br/>
-      <select name="i">
-        <option value="10">10</option>
-        <option value="25">25</option>
-        <option value="50">50</option>
-        <option value="100">100</option>
-      </select>
-      <p/>
-      <input type="submit" name="submit" value="Search"/>  
-    </form>
-    <?php      
-    // if form submitted
-    } else {
-      // check for search keywords
-      // trim whitespace
-      // separate multiple keywords with /
-      if (!isset($_POST['q']) || empty($_POST['q'])) {
-        die ('ERROR: Please enter one or more search keywords');
-      } else {
-        $q = $_POST['q'];
-        $q = preg_replace('/[[:space:]]+/', '/', trim($q));
-      }
-      
-      // set max results
-      if (!isset($_POST['i']) || empty($_POST['i'])) {
-        $i = 25;
-      } else {
-        $i = $_POST['i'];
-      }
-      
-      // generate feed URL
-      $feedURL = "http://gdata.youtube.com/feeds/api/videos/-/{$q}?orderby=viewCount&max-results={$i}";
-      
-      // read feed into SimpleXML object
-      $sxml = simplexml_load_file($feedURL);
-      
-      // get summary counts from opensearch: namespace
-      $counts = $sxml->children('http://a9.com/-/spec/opensearchrss/1.0/');
-      $total = $counts->totalResults; 
-      $startOffset = $counts->startIndex; 
-      $endOffset = ($startOffset-1) + $counts->itemsPerPage;       
-      ?>
-      
-      <h1>Search results</h1>
-      <?php echo $total; ?> items found. Showing items 
-      <?php echo $startOffset; ?> to <?php echo $endOffset; ?>:
-      <p/>
-      
-      <table>
-      <?php    
-      // iterate over entries in resultset
-      // print each entry's details
-      foreach ($sxml->entry as $entry) {
-        // get nodes in media: namespace for media information
-        $media = $entry->children('http://search.yahoo.com/mrss/');
+        <div style="display: none; position: absolute; z-index: 110; left: 400; top: 100; width: 15; height: 15" id="preview_div"></div>
+        <table id="main">
+            <tbody><tr>
+    <td colspan="3" class="header">
+        <div id="home-link">
+        </div>
+        <div id="search-div">
+            <form action="/index.php">
+                <input type="text" id="search" name="cat">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td colspan="3" class="header-shade"></td>
+</tr>
+            <tr>
+                <td class="left-menu">
+                    <div class="menu_section">
+    <h2>Recent Search</h2>
+    <ul>
+        <li><a href="#">Video 1</a></li>
+        <li><a href="#">Video 2</a></li>
+        <li><a href="#">Video 3</a></li>
+        <li><a href="#">Video 4</a></li>
+        <li><a href="#">Video 5</a></li>
+        <li><a href="#">Video 6</a></li>
+        <li><a href="#">Video 7</a></li>
+        <li><a href="#">Video 8</a></li>
+        <li><a href="#">Video 9</a></li>
+        <li><a href="#">Video 11</a></li>
+        <li><a href="#">Video 12</a></li>
+        <li><a href="#">Video 13</a></li>
+        <li><a href="#">Video 14</a></li>
+        <li><a href="#">Video 15</a></li>
+        <li><a href="#">Video 16</a></li>
+        <li><a href="#">Video 17</a></li>
+        <li><a href="#">Video 18</a></li>
+        <li><a href="#">Video 19</a></li>
+        <li><a href="#">Video 20</a></li>
         
-        // get video player URL
-        $attrs = $media->group->player->attributes();
-        $watch = $attrs['url']; 
-        
-        // get video thumbnail
-        $attrs = $media->group->thumbnail[0]->attributes();
-        $thumbnail = $attrs['url']; 
-        
-        // get <yt:duration> node for video length
-        $yt = $media->children('http://gdata.youtube.com/schemas/2007');
-        $attrs = $yt->duration->attributes();
-        $length = $attrs['seconds']; 
-        
-        // get <gd:rating> node for video ratings
-        $gd = $entry->children('http://schemas.google.com/g/2005'); 
-        if ($gd->rating) {
-          $attrs = $gd->rating->attributes();
-          $rating = $attrs['average']; 
-        } else {
-          $rating = 0; 
-        }
+    </ul>
+</div>                </td>
+                <td class="content">
+                    
+                    <h1>Recent Viewed Videos - Video By Choice - Page 1</h1>
+                        <div style="float: left;"><a class="button" href="#">Previous</a></div>
+                        <div style="float: right;"><a class="button" href="#">Next</a></div>
+                        <div class="clr"></div>
+                           <h2>
+                                <a href="#">
+                                    Video 1
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 1" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                            <h2>
+                                <a href="#">
+                                    Video 2
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 2" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                            <h2>
+                                <a href="#">
+                                    Video 3
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 3" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                            <h2>
+                                <a href="#">
+                                    Video 4
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 4" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                            <h2>
+                                <a href="#">
+                                    Video 5
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 5" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                            <h2>
+                                <a href="#">
+                                    Video 6
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 6" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                            <h2>
+                                <a href="#">
+                                    Video 7
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 7" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                            <h2>
+                                <a href="#">
+                                    Video 8
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 8" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                            <h2>
+                                <a href="#">
+                                    Video 9
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 9" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                            
+                            <h2>
+                                <a href="#">
+                                    Video 10
+                                    <span style="float: right;">0:00</span>
+                                </a>
+                            </h2>
+                            <a href="#">
+                                <img src="#" alt="Video 10" class="thumbnail">
+                            </a>
+                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
+                            <div>Published On: 1 year ago</div>
+                            <div>Updated On: 8 months ago</div>
+                            <div>Last View On: 49 seconds ago</div>
+                            <div class="clr"></div>
+                        <div style="float: left;"><a class="button" href="#">Previous</a></div>
+                        <div style="float: right;"><a class="button" href="#">Next</a></div>
+                                        </td>
+                <td class="menu">
+                    
 
-        // print record
-        echo "<tr><td colspan=\"2\" class=\"line\"></td>
-        </tr>\n";
-        echo "<tr>\n";
-        echo "<td><a href=\"{$watch}\"><img src=\"$thumbnail\" style='witdh:100px; height:100px'/></a></td>\n";
-        echo "<td><a href=\"{$watch}\">
-        {$media->group->title}</a><br/>\n";
-        echo sprintf("%0.2f", $length/60) . " min. | {$rating} user 
-        rating<br/>\n";
-        echo $media->group->description . "</td>\n";
-        echo "</tr>\n";
-      }
-    }
-    ?>
-    </table>
-  </body>
+                </td>
+            </tr>
+            <tr>
+    <td colspan="3" class="footer">
+        Copyright &copy; <a href="#">www.videobychoice.com</a>
+
+        
+        </tbody></table>
+    
+</body>
 </html> 
