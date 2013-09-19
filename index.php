@@ -63,8 +63,8 @@
                                     <span style="float: right;">0:00</span>
                                 </a>
                             </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 1" class="thumbnail">
+                            <a href="#" class="thumbnail">
+                                <img src="#" alt="Video 1">
                             </a>
                             This is the description of video.This is the description of video.This is the description of video.This is the description of video.
                             <div>Published On: 1 year ago</div>
@@ -201,7 +201,7 @@
                         <div style="float: left;"><a class="button" href="#">Previous</a></div>
                         <div style="float: right;"><a class="button" href="#">Next</a></div>
                                         </td>
-                <td class="menu">
+                <td class="right-menu">
                     
 
                 </td>
