@@ -4,8 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>Recent Videos | Video By Choice</title>
-<script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
-<script type="text/javascript">jwplayer.key="Ksio49Ksi8bdi8KS8S";</script>
 <script src="http://jwpsrv.com/library/eRPQyiEnEeO7hCIACusDuQ.js"></script>
   </head>
   <body>
