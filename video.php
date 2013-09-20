@@ -4,7 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>Recent Videos | Video By Choice</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
 <script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
 <script type="text/javascript">jwplayer.key="Ksio49Ksi8bdi8KS8S";</script>
 <script src="http://jwpsrv.com/library/eRPQyiEnEeO7hCIACusDuQ.js"></script>
@@ -29,11 +28,12 @@
 </tr>
                 <tr>
                     <td>
+                        <h1>How to setup Youtube API on your website</h1>
                         <div id="myElement">Loading the player...</div>
 
 <script type="text/javascript">
     jwplayer("myElement").setup({
-        file: "/uploads/myVideo.mp4",
+        file: "http://www.youtube.com/watch?v=y1udEpJZBZ4",
         image: "/uploads/myPoster.jpg"
     });
 </script>

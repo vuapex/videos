@@ -11,8 +11,7 @@
         <table id="main">
             <tbody><tr>
     <td colspan="3" class="header">
-        <div id="home-link">
-        </div>
+        
         <div id="search-div">
             <form action="/index.php">
                 <input type="text" id="search" name="cat">
@@ -58,146 +57,20 @@
                         <div style="float: right;"><a class="button" href="#">Next</a></div>
                         <div class="clr"></div>
                            <h2>
-                                <a href="#">
-                                    Video 1
-                                    <span style="float: right;">0:00</span>
+                                <a href="./video.php">
+                                    How to setup Youtube API on your website
+                                    <span style="float: right;">3:09</span>
                                 </a>
                             </h2>
-                            <a href="#" class="thumbnail">
-                                <img src="#" alt="Video 1">
+                            <a href="./video.php" class="thumbnail">
+                                <img src="./video.php" alt="How to setup Youtube API on your website " class="thumbnail">
                             </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
-                            <div>Last View On: 49 seconds ago</div>
-                            <div class="clr"></div>
-                            <h2>
-                                <a href="#">
-                                    Video 2
-                                    <span style="float: right;">0:00</span>
-                                </a>
-                            </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 2" class="thumbnail">
-                            </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
-                            <div>Last View On: 49 seconds ago</div>
-                            <div class="clr"></div>
-                            <h2>
-                                <a href="#">
-                                    Video 3
-                                    <span style="float: right;">0:00</span>
-                                </a>
-                            </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 3" class="thumbnail">
-                            </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
-                            <div>Last View On: 49 seconds ago</div>
-                            <div class="clr"></div>
-                            <h2>
-                                <a href="#">
-                                    Video 4
-                                    <span style="float: right;">0:00</span>
-                                </a>
-                            </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 4" class="thumbnail">
-                            </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
-                            <div>Last View On: 49 seconds ago</div>
-                            <div class="clr"></div>
-                            <h2>
-                                <a href="#">
-                                    Video 5
-                                    <span style="float: right;">0:00</span>
-                                </a>
-                            </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 5" class="thumbnail">
-                            </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
-                            <div>Last View On: 49 seconds ago</div>
-                            <div class="clr"></div>
-                            <h2>
-                                <a href="#">
-                                    Video 6
-                                    <span style="float: right;">0:00</span>
-                                </a>
-                            </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 6" class="thumbnail">
-                            </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
-                            <div>Last View On: 49 seconds ago</div>
-                            <div class="clr"></div>
-                            <h2>
-                                <a href="#">
-                                    Video 7
-                                    <span style="float: right;">0:00</span>
-                                </a>
-                            </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 7" class="thumbnail">
-                            </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
-                            <div>Last View On: 49 seconds ago</div>
-                            <div class="clr"></div>
-                            <h2>
-                                <a href="#">
-                                    Video 8
-                                    <span style="float: right;">0:00</span>
-                                </a>
-                            </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 8" class="thumbnail">
-                            </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
-                            <div>Last View On: 49 seconds ago</div>
-                            <div class="clr"></div>
-                            <h2>
-                                <a href="#">
-                                    Video 9
-                                    <span style="float: right;">0:00</span>
-                                </a>
-                            </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 9" class="thumbnail">
-                            </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
+                            I used Javascript callback to place my latest youtube videos on my website. They automatically update and pull each time right from the Youtube API. This is simple code no developer account needed and a great way to get more views of your channel.
+                            <div>Published On: Mar 6, 2013</div>
+                            <div>Updated On: May 18, 2013</div>
                             <div>Last View On: 49 seconds ago</div>
                             <div class="clr"></div>
                             
-                            <h2>
-                                <a href="#">
-                                    Video 10
-                                    <span style="float: right;">0:00</span>
-                                </a>
-                            </h2>
-                            <a href="#">
-                                <img src="#" alt="Video 10" class="thumbnail">
-                            </a>
-                            This is the description of video.This is the description of video.This is the description of video.This is the description of video.
-                            <div>Published On: 1 year ago</div>
-                            <div>Updated On: 8 months ago</div>
-                            <div>Last View On: 49 seconds ago</div>
-                            <div class="clr"></div>
                         <div style="float: left;"><a class="button" href="#">Previous</a></div>
                         <div style="float: right;"><a class="button" href="#">Next</a></div>
                                         </td>
