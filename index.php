@@ -4,7 +4,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>Recent Videos | Video By Choice</title>
-<link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
         <div style="display: none; position: absolute; z-index: 110; left: 400; top: 100; width: 15; height: 15" id="preview_div"></div>
